@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="c:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20221109110829176.png">
 <meta property="article:published_time" content="2022-11-08T07:54:30.000Z">
-<meta property="article:modified_time" content="2022-11-09T03:14:53.497Z">
+<meta property="article:modified_time" content="2022-11-09T13:10:31.906Z">
 <meta property="article:author" content="Lil3bear">
 <meta property="article:tag" content="逆向 二进制 寄存器">
 <meta name="twitter:card" content="summary">
@@ -228,6 +228,14 @@
 <p>2.栈是用来储存临时变量，函数传递的中间结果</p>
 <p>3.堆栈是操作系统维护的，对于“正向程序员”是透明的</p>
 <p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20221109110829176.png" alt="image-20221109110829176"></p>
+<p>将栈看作一个杯子EBP是杯底，ESP是杯口</p>
+<p>push 入栈 pop 出栈</p>
+<h4 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h4><p>pop ecx 相当于</p>
+<p>mov ecx,dword ptr ss:[esp]</p>
+<p>lea esp,dword ptr ss:[esp+4]&#x3D;&#x3D;mov esp,esp+4&#x3D;&#x3D;add esp,4</p>
+<p>或者</p>
+<p>lea esp dword ptr ss:[esp+4]</p>
+<p>mov ecx,dword ptr ss:[esp-4]</p>
 
       
 
@@ -331,6 +339,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2022/11/10/%E6%BB%B4%E6%B0%B4%E9%80%86%E5%90%91%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          滴水逆向笔记（2）
+        
+      </div>
+    </a>
   
   
     <a href="/2022/10/19/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2/" id="article-nav-older" class="article-nav-link-wrap">
@@ -520,6 +537,30 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="http://81.68.106.129/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>杰哥jayha$ker</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.alplexchur.icu" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Alplexchur</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.fup1p1.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Fup1p1</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.l3gend.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>L3gend</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.l1men2.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>L1men2</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.lunatic007.top" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Lunatic</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.br0sy.top" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>br0sy</a>
             </li>
           
         </ul>
